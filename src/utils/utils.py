@@ -23,12 +23,13 @@ def save_object(file_path, obj):
     except Exception as e:
         raise CustomException(e, sys)
     
+    #update model evalution functions
 def evaluate_models(X_train, y_train,X_test,y_test,models,param):
     try:
         report = {}
 
         for i in range(len(list(models))):
-            model = list(models.values())[i]
+            model = list(models.values())[i]s
             para=param[list(models.keys())[i]]
 
             gs = GridSearchCV(model,para,cv=3)
