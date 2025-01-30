@@ -11,3 +11,5 @@ scaled_data = scaler.fit_transform([data])
 
 # Print the scaled data
 print(scaled_data)
+
+print("Done!")
