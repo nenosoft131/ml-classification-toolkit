@@ -1,0 +1,16 @@
+# @package _global_
+
+training:
+  max_epochs: null
+  print_freq: 20
+  eval_freq: 1
+  save_freq: 1
+
+  data:
+    batchsize: 32
+    workers: 4
+    pin_memory: False
+    shuffle: True
+
+  optimizer:
+    lr: 0.0001

@@ -1,0 +1,17 @@
+# @package _global_
+
+# specify here default configuration
+# order of defaults determines the order in which configs override each other
+defaults:
+  - _self_
+  - logger: null # set logger here or use command line (e.g. `python train.py logger=tensorboard`)
+  - paths: default
+  - extras: default
+  - hydra: default
+  - dataset: ???
+  - debug: null
+  - optional local: ${oc.env:LOCAL_CONFIG}
+
+hydra:
+  searchpath:
+     - file:///home/browatbn/dev/nanostruct/ML/src/data/conf

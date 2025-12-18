@@ -1,0 +1,19 @@
+# @package _global_
+
+exp_name: make_dataset
+
+seed: 0
+
+dataset: 240512_CommonRaman
+species: ['brevis', 'casei', 'ecoli', 'grayi', 'innocua', 'lindneri', 'pectinatus', 'plantarum', 'rossiae', 'rade']
+
+filename_data: spectra.csv
+filename_meta: metadata.csv
+
+input_dir: ${paths.data_dir}/raw
+output_dir: ${paths.data_dir}/processed
+
+split:
+  out_dirname: splits
+  n_splits: 3
+  train_size: 0.8

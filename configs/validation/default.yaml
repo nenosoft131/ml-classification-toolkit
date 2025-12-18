@@ -1,0 +1,11 @@
+# @package _global_
+
+validation:
+  print_freq: 20
+
+  data:
+    batchsize: 32
+    workers: 4
+    pin_memory: False
+    shuffle: False
+

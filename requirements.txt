@@ -1,8 +1,18 @@
 pandas
-numpy 
-tensorflow
-scikit-learn
-langchain
-keras
+streamlit==1.11
+bokeh
+plotly
+# plotly-express
+st_pages==0.4.4
+# streamlit_extras==0.3.6
 matplotlib
--e .
+scikit-learn
+numpy
+streamlit_plotly_events
+seaborn
+pybaselines
+# altair<5
+hydra-core
+omegaconf
+torchmetrics
+hydra_colorlog

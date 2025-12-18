@@ -1,0 +1,50 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+exp_name: 'species_multilabel_mlp_commonraman'
+
+target_species: ['casei', 'rossiae', 'plantarum', 'lindneri', 'brevis', 'ecoli', 'grayi', 'innocua', 'pectinatus']
+
+threshold: 0.5  # threshold for transforming probability to binary (0,1) predictions
+
+seed: null
+
+num_frequencies: 984
+resume:  epoch_00007.pth
+
+model:
+  type: 'MLP1D'
+  pretrained: False
+
+training:
+  max_epochs: null
+  print_freq: 10
+  save_freq: 1
+  data:
+    data_csv: ${paths.data_dir}/processed/spectra.csv
+    meta_csv: ${paths.data_dir}/processed/splits/train-split1.csv
+    batchsize: 64
+    workers: 0
+    shuffle: True
+  optimizer:
+    lr: 0.001
+
+validation:
+  print_freq: 10
+  data:
+    data_csv: ${paths.data_dir}/processed/spectra.csv
+    meta_csv: ${paths.data_dir}/processed/splits/val-split1.csv
+    batchsize: 32
+    workers: 4
+
+test:
+  data:
+    data_csv: ${paths.data_dir}/processed/spectra.csv
+    meta_csv: ${paths.data_dir}/processed/splits/val-split1.csv
+    batchsize: 32
+    workers: 4
