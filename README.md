@@ -1,122 +1,60 @@
-🧠 ML Data Processing Toolkit
+# 🧠 ML Data Processing Toolkit
 
-An interactive Streamlit-based Machine Learning application for data exploration, preprocessing, and classification.
-This project demonstrates a structured, end-to-end ML workflow with a user-friendly multi-page web interface.
+An interactive **Streamlit-based Machine Learning application** for **data exploration, preprocessing, and classification**.  
+This project provides a structured workflow to process datasets, train ML models, and evaluate performance with a user-friendly multi-page web interface.
 
-🚀 Features
+---
 
-📊 Data Viewer
+## 🚀 Features
 
-Load and explore datasets interactively
+- 📊 **Data Viewer**  
+  Explore datasets and inspect raw data interactively.
 
-Inspect raw data before processing
+- ⚙️ **Pre-processing**  
+  Apply smoothing, filtering, baseline correction, and other preprocessing steps.
 
-⚙️ Pre-processing
+- 🧠 **Classification**  
+  Train ML classification models and evaluate performance using **cross-validation**.
 
-Apply common preprocessing techniques:
+- 🖥️ **Multi-page Streamlit App**  
+  Easy navigation between **Home**, **Data Viewer**, **Pre-processing**, and **Classification** pages using `st-pages`.
 
-Smoothing
+---
 
-Filtering
-
-Baseline correction
-
-🧠 Classification
-
-Train machine learning classification models
-
-Evaluate model performance using cross-validation
-
-🖥️ Multi-page Streamlit App
-
-Clear navigation using st-pages
-
-Central home dashboard
-
-🗂️ Project Structure
+## 🗂️ Project Structure
 ml/
 │
 ├── configs/
-│   └── config.py
+│ └── config.py # Configuration (paths, constants, assets)
 │
 ├── src/
-│   ├── streamlit_app/
-│   │   ├── index.py
-│   │   ├── st_data.py
-│   │   ├── st_preprocessing.py
-│   │   └── st_classification.py
-│   │
-│   ├── data/
-│   ├── models/
-│   └── utils/
+│ ├── streamlit_app/
+│ │ ├── index.py # Main Streamlit entry point
+│ │ ├── st_data.py # Data viewer page
+│ │ ├── st_preprocessing.py # Pre-processing logic & UI
+│ │ └── st_classification.py # Classification & evaluation
+│ │
+│ ├── data/ # Data handling modules
+│ ├── models/ # ML models & training logic
+│ └── utils/ # Helper and utility functions
 │
-├── requirements.txt
-├── pyproject.toml
-├── setup.py
-├── README.md
-└── .gitignore
+├── requirements.txt # Python dependencies
+├── pyproject.toml # Project metadata
+├── setup.py # Package setup
+├── README.md # Project documentation
+└── .gitignore # Ignored files
 
-⚙️ Installation
+*
+---
+
+## ⚙️ Installation
+
+1. **Clone the repository**
+```bash
 git clone https://github.com/nenosoft131/ml.git
 cd ml
+
+
 python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-
-▶️ Run the Application
-streamlit run src/streamlit_app/index.py
-
-
-Open in your browser:
-
-http://localhost:8501
-
-🛠️ Technologies Used
-
-Python
-
-Streamlit
-
-scikit-learn
-
-NumPy & Pandas
-
-Pillow (PIL)
-
-st-pages
-
-🎯 Use Cases
-
-Machine learning prototyping
-
-Data preprocessing workflows
-
-Educational ML demonstrations
-
-Rapid experimentation with classification models
-
-📌 Future Enhancements
-
-Advanced ML models
-
-Dataset upload via UI
-
-Model persistence
-
-Experiment tracking
-
-Docker deployment
-
-🤝 Contributing
-
-Contributions are welcome.
-Please open an issue or submit a pull request.
-
-📄 License
-
-MIT License
-
-👤 Author
-
-NenoSoft131
-GitHub: https://github.com/nenosoft131
+source venv/bin/activate       # On Windows: venv\Scripts\activate
+****
