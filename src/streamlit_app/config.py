@@ -1,7 +1,7 @@
 
 data_root = "./data/"
 
-datasets = ['240512_CommonRaman', 'old_data', '230913_SingleDatasets', '230913_OEM-Geraet']
+datasets = ['old_data']
 
 FILEPATH_LOGO_JPG = "logo.jpeg"
 
