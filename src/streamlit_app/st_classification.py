@@ -20,7 +20,7 @@ cfg.backend_scatter = 'plotly'
 st.bokeh_chart = util.use_file_for_bokeh
 
 logo = Image.open(cfg.FILEPATH_LOGO_JPG)
-st.set_page_config(page_title="NanoStruct | Classification", page_icon=logo, layout='wide')
+st.set_page_config(page_title="ML | Classification", page_icon=logo, layout='wide')
 
 level_choices = ['bacterium', 'group', 'is_target']
 if 'level' not in st.session_state:
