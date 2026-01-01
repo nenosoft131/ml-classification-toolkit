@@ -14,5 +14,3 @@ pybaselines
 # altair<5
 hydra-core
 omegaconf
-torchmetrics
-hydra_colorlog
