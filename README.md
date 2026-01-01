@@ -22,13 +22,13 @@ This project provides a structured workflow to process datasets, train ML models
 ---
 
 ## 🗂️ Project Structure
+
 ml/
-│
 ├── configs/
 │ └── config.py # Configuration (paths, constants, assets)
 │
 ├── src/
-│ ├── streamlit_app/
+│ ├── streamlit_app/ # Streamlit multi-page application
 │ │ ├── index.py # Main Streamlit entry point
 │ │ ├── st_data.py # Data viewer page
 │ │ ├── st_preprocessing.py # Pre-processing logic & UI
@@ -44,8 +44,14 @@ ml/
 ├── README.md # Project documentation
 └── .gitignore # Ignored files
 
-*
----
+
+
+
+Avoid putting it inline like your first attempt — GitHub will just treat it as normal text.
+
+If you want, I can rewrite the entire README with this properly formatted tree so it looks clean and professional on GitHub.
+
+Do you want me to do that?
 
 ## ⚙️ Installation
 
@@ -58,3 +64,4 @@ cd ml
 python -m venv venv
 source venv/bin/activate       # On Windows: venv\Scripts\activate
 ****
+
