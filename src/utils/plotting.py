@@ -152,7 +152,7 @@ def make_lineplot(freqs, height=lineplot_height, set_y_range=False):
     return p
 
 
-def plot_raman(data, freqs=None, meta=None, class_column='target', color='viridis', options=None):
+def plot_data(data, freqs=None, meta=None, class_column='target', color='viridis', options=None):
     if freqs is None:
         freqs = range(cfg.NUM_FREQUENCIES)
 
