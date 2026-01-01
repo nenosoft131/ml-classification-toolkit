@@ -5,7 +5,7 @@ import config as cfg
 
 logo = Image.open(cfg.FILEPATH_LOGO_JPG)
 
-st.set_page_config(page_title="NanoStruct ML Home", page_icon=logo)
+st.set_page_config(page_title="ML Home", page_icon=logo)
 
 show_pages(
     [
@@ -20,7 +20,7 @@ col = st.columns([1, 4])
 with col[0]:
     st.image(logo, width=100)
 with col[1]:
-    st.title("NanoStruct")
+    st.title("ML Home")
 
 "## Data Processing Toolkit"
 
