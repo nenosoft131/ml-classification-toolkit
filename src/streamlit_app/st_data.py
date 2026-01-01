@@ -21,7 +21,7 @@ def filter(meta, data, column, values):
 st.bokeh_chart = util.use_file_for_bokeh
 
 logo = Image.open(cfg.FILEPATH_LOGO_JPG)
-st.set_page_config(page_title="NanoStruct | Data", page_icon=logo, layout='wide')
+st.set_page_config(page_title="ML | Data", page_icon=logo, layout='wide')
 
 
 "# Data viewer"
