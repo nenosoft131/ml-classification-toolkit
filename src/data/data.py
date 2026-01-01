@@ -8,74 +8,13 @@ import numpy as np
 # from src import config as cfg
 
 
-fname_ecoli = [
-    "Target1_230615_EColiNis/230615_Data_Map3.txt"
-]
-fname_ecoli_ringer = [
-    "Target1_230720_RingerLoesungEColiNis/PL02-XX_MutaFl_NoAl2O3_Str1_Points_40xObj_OD1_1x5s.txt",
-    "Target1_230720_RingerLoesungEColiNis/PL02-XX_MutaFl_NoAl2O3_Str2_Points_40xObj_OD1_1x5s.txt",
-    "Target1_230720_RingerLoesungEColiNis/PL02-XX_MutaFl_NoAl2O3_Str3_Points_40xObj_OD1_1x5s.txt"
-]
-fname_brevis_ringer = [
-    "Target2_230720_RingerLoesungBrevis/PL02-XX_WuHo_NoAl2O3_Str1_Points_40xObj_OD1_1x5s.txt",
-    "Target2_230720_RingerLoesungBrevis/PL02-XX_WuHo_NoAl2O3_Str2_Points_40xObj_OD1_1x5s.txt",
-    "Target2_230720_RingerLoesungBrevis/PL02-XX_WuHo_NoAl2O3_Str3_Points_40xObj_OD1_1x5s.txt"
-]
-fname_notarget_dirty = [
-    "NoTarget_230715_Dirty/OK12-24_Str4_40xObj_OD1_1x5s.txt",
-    "NoTarget_230715_Dirty/OK12-24_Str4_40xObj_OD1_1x5s_2.txt",
-    "NoTarget_230715_Dirty/OK12-24_Str6_40xObj_OD1_1x5s.txt",
-    "NoTarget_230715_Dirty/OK12-24_Str6_40xObj_OD1_1x5s_2.txt",
-
-    "NoTarget_230715_Dirty/OK12-25_Str4_40xObj_OD1_1x5s.txt",
-    "NoTarget_230715_Dirty/OK12-25_Str4_40xObj_OD1_1x5s_2.txt",
-    "NoTarget_230715_Dirty/OK12-25_Str6_40xObj_OD1_1x5s.txt",
-    "NoTarget_230715_Dirty/OK12-25_Str6_40xObj_OD1_1x5s_2.txt",
-]
-
-fname_notarget_noanalyte = [
-    "NoTarget_230720_NoAnalyte/PL02-XX_3nmAl2O3_Str1_Points_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_NoAnalyte/PL02-XX_NoAl2O3_Str1_Points_40xObj_OD1_1x5s_2.txt",
-    "NoTarget_230720_NoAnalyte/PL02-XX_3nmAl2O3_Str2_Points_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_NoAnalyte/PL02-XX_NoAl2O3_Str1_Points_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_NoAnalyte/PL02-XX_3nmAl2O3_Str3_Points_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_NoAnalyte/PL02-XX_NoAl2O3_Str2_Points_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_NoAnalyte/PL02-XX_NoAl2O3_Str1_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_NoAnalyte/PL02-XX_NoAl2O3_Str3_Points_40xObj_OD1_1x5s.txt"
-]
-
-fname_notarget_ringer = [
-    "NoTarget_230720_RingerLoesung/PL02-XX_Ringer_3nmAl2O3_Str1_Points_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_RingerLoesung/PL02-XX_Ringer_3nmAl2O3_Str2_Points_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_RingerLoesung/PL02-XX_Ringer_3nmAl2O3_Str3_Points_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_RingerLoesung/PL02-XX_Ringer_NoAl2O3_Str1_Points_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_RingerLoesung/PL02-XX_Ringer_NoAl2O3_Str2_Points_40xObj_OD1_1x5s.txt",
-    "NoTarget_230720_RingerLoesung/PL02-XX_Ringer_NoAl2O3_Str3_Points_40xObj_OD1_1x5s.txt",
-]
-
-fname_ecoli_new = [
-    "Target1_230803_EColiNis/PLXX_285Ag_EColi2xZent_Map3_40xObj_OD1_1x15s.txt",
-    "Target1_230803_EColiNis/PLXX_285Ag_EColi2xZent_Map4_40xObj_OD1_1x15s.txt",
-    "Target1_230803_EColiNis/PLXX_30Ag_EColi2xZent_Map5_40xObj_OD1_1x15s.txt",
-    "Target1_230803_EColiNis/PLXX_45Ag15Au_EColi2xZent_Map1_40xObj_OD1_1x15s.txt",
-    "Target1_230803_EColiNis/PLXX_45Ag15Au_EColi2xZent_Map2_40xObj_OD1_1x15s.txt",
-]
-
-fname_omnibio = [
-    "Target3_230803_OmniBioLactos/PLXX_285Ag_OmniBio2xZent_Map8_40xObj_OD1_1x15s.txt",
-    "Target3_230803_OmniBioLactos/PLXX_30Ag_OmniBio2xZent_Map6_40xObj_OD1_1x15s.txt",
-    "Target3_230803_OmniBioLactos/PLXX_45Ag15Au_OmniBio2xZent_Map7_40xObj_OD1_1x15s.txt",
+fname_dataset = [
+    "dataset1.txt",
+    "datset2.txt"
 ]
 
 data_def = {
-    'ecoli': {'fnames': fname_ecoli, 'target': 'ecoli'},
-    'ecoli_ringer': {'fnames': fname_ecoli_ringer, 'target': 'ecoli'},
-    'brevis_ringer': {'fnames': fname_brevis_ringer, 'target': 'brevis'},
-    'ecoli_new': {'fnames': fname_ecoli_new, 'target': 'ecoli'},
-    'omnibio': {'fnames': fname_omnibio, 'target': 'omnibio'},
-    'notarget_dirty': {'fnames': fname_notarget_dirty, 'target': 'notarget'},
-    'notarget_noanalyte': {'fnames': fname_notarget_noanalyte, 'target': 'notarget'},
-    'notarget_ringer': {'fnames': fname_notarget_ringer, 'target': 'notarget'}
+    'f_dataset': {'fnames': fname_dataset, 'target': 'Fname'}
 }
 
 
@@ -192,7 +131,6 @@ def read_folder(folder, sample_id, species_to_load):
 
     meta['pcr'] = reformat_pcr(meta['pcr'])
 
-    # meta['species'] = make_list(meta['species'])
     for filepath in sorted(glob(os.path.join(folder, '*'))):
         # if os.path.isdir(filepath):
         #     read_folder(filepath, sample_id, species_to_load)
@@ -229,10 +167,9 @@ def read_data(data_root, dataset, format='single', species_to_load=None):
                 all_data.append(data)
 
     assert len(all_data) > 0, f"Could not read any data from path {data_root}."
-    assert len(all_data) == len(all_samples), "Number of meta data entries must match number of data samples"
+    assert len(all_data) == len(all_samples), 
 
     df_meta = pd.DataFrame(all_samples)
-    # df_meta['is_target'] = df_meta['target'].map(lambda t: 'no target' if t == 'NoTarget' else 'target')
 
     data = np.array(all_data)
 
