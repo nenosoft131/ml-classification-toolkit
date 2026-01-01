@@ -4,8 +4,8 @@ exp_name: make_dataset
 
 seed: 0
 
-dataset: 240512_CommonRaman
-species: ['brevis', 'casei', 'ecoli', 'grayi', 'innocua', 'lindneri', 'pectinatus', 'plantarum', 'rossiae', 'rade']
+dataset: CommonDataset
+species: []
 
 filename_data: spectra.csv
 filename_meta: metadata.csv
