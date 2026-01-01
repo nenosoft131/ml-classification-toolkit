@@ -29,7 +29,7 @@ data = data.values.astype(float)
 
 "### Raw data"
 "---"
-st.bokeh_chart(plotting.plot_raman(data, freqs=freqs, meta=meta))
+st.bokeh_chart(plotting.plot_data(data, freqs=freqs, meta=meta))
 
 
 "### Despiking"
@@ -39,7 +39,7 @@ despiking_window = st.slider("Despike window", min_value=1, max_value=50, value=
 despiking_threshold = st.slider("Despike threshold", min_value=1, max_value=50, value=10)
 data = preprocessing.despike_whitaker(data, ma=despiking_window*2+1, threshold=despiking_threshold)
 
-st.bokeh_chart(plotting.plot_raman(data, freqs=freqs, meta=meta))
+st.bokeh_chart(plotting.plot_data(data, freqs=freqs, meta=meta))
 
 "### Smoothing"
 "Apply Savitzky-Golay filter."
@@ -48,7 +48,7 @@ smoothing_window = st.slider("Smoothing window", min_value=1, max_value=50, valu
 smoothing_polyorder = st.slider("Polynomial order", min_value=1, max_value=5, value=2)
 data = preprocessing.smooth_savitzky_golay(data, window=smoothing_window, polyorder=smoothing_polyorder)
 
-st.bokeh_chart(plotting.plot_raman(data, freqs=freqs, meta=meta))
+st.bokeh_chart(plotting.plot_data(data, freqs=freqs, meta=meta))
 
 
 "### Baseline correction"
@@ -61,11 +61,11 @@ st.write("= ", baseline_lam)
 baseline_order = st.slider("Differential order", min_value=1, max_value=4, value=2)
 data_baselined, baselines = preprocessing.baseline_correct(data, lam=baseline_lam, diff_order=baseline_order, return_baselines=True)
 
-fig = plotting.plot_raman(data, freqs=freqs, meta=meta)
+fig = plotting.plot_data(data, freqs=freqs, meta=meta)
 fig = plotting.multi_line(fig, baselines, freqs)
 st.bokeh_chart(fig)
 
-st.bokeh_chart(plotting.plot_raman(data_baselined, freqs=freqs, meta=meta))
+st.bokeh_chart(plotting.plot_data(data_baselined, freqs=freqs, meta=meta))
 
 
 "### Normalization"
@@ -76,4 +76,4 @@ data = data_baselined
 data = preprocessing.normalize(data)
 # data = preprocessing.baseline_correct(data)
 
-st.bokeh_chart(plotting.plot_raman(data, freqs=freqs, meta=meta))
+st.bokeh_chart(plotting.plot_data(data, freqs=freqs, meta=meta))
