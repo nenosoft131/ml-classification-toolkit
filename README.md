@@ -39,6 +39,7 @@ It provides an end-to-end workflow for experimenting with classification models,
 
 
 ### Installation
+bash
 - Clone the Repository
 - Create a Virtual Environment
    python -m venv venv
@@ -64,5 +65,6 @@ Built with:
 - Streamlit for interactive ML apps
 - scikit-learn for classical ML models
 - PyTorch/TensorFlow for neural networks
+
 
 
