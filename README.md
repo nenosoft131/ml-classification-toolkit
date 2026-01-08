@@ -37,19 +37,29 @@ It provides an end-to-end workflow for experimenting with classification models,
 - Run preprocessing and training interactively
 - Visualize classification results
 
+## 🛠️ Installation
 
-### Installation
-bash
-- Clone the Repository
-- Create a Virtual Environment
-   python -m venv venv
+Follow these steps to set up and run the application locally:
 
+```bash
+# Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 
-- Install Dependencies
-   pip install -r requirements.txt
+# Create a virtual environment
+python -m venv venv
 
-- Run the Streamlit Application
-    streamlit run streamlit_app/app.py
+# Activate the virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the Streamlit application
+streamlit run streamlit_app/app.py
 
 
 ## Configuration
@@ -65,6 +75,7 @@ Built with:
 - Streamlit for interactive ML apps
 - scikit-learn for classical ML models
 - PyTorch/TensorFlow for neural networks
+
 
 
 
