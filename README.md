@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 # Run the Streamlit application
 streamlit run streamlit_app/app.py
-
+```
 
 ## Configuration
 
@@ -75,6 +75,7 @@ Built with:
 - Streamlit for interactive ML apps
 - scikit-learn for classical ML models
 - PyTorch/TensorFlow for neural networks
+
 
 
 
